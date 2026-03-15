@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Åtkomstleverantör för lokal hemmapp"
+  },
+  "extensionDescription": {
+    "message": "Ett leverantörstillägg för WebExtensions som använder VFS-verktygslådan och exponerar den lokala hemmappen via inbyggd meddelandehantering."
+  },
+  "providerName": {
+    "message": "Lokal hemmapp"
+  },
+  "btnCancel": {
+    "message": "Avbryt"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Bevilja åtkomst"
+  },
+  "btnDownload": {
+    "message": "Hämta"
+  },
+  "btnRevoke": {
+    "message": "Återkalla"
+  },
+  "setupTitle": {
+    "message": "Åtkomstleverantör för lokal hemmapp"
+  },
+  "setupQuestion": {
+    "message": "Bevilja tillägget «$ADDON_NAME$» åtkomst till din lokala hemmapp?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "Åtkomst för tillägget «$ADDON_NAME$» har redan beviljats.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Skrivskyddad åtkomst"
+  },
+  "setupReadonlyDesc": {
+    "message": "Tillägget kan bläddra och läsa filer i din hemmapp, men kan inte skapa, ändra eller ta bort något."
+  },
+  "setupReadwriteTitle": {
+    "message": "Läs- och skrivåtkomst"
+  },
+  "setupReadwriteDesc": {
+    "message": "Tillägget kan läsa, skapa, ändra och ta bort filer och mappar i din hemmapp."
+  },
+  "configTitle": {
+    "message": "Lokal hemmapp — Inställningar"
+  },
+  "configSectionFileListing": {
+    "message": "Fillista"
+  },
+  "configShowHiddenTitle": {
+    "message": "Visa dolda filer"
+  },
+  "configShowHiddenDesc": {
+    "message": "Inkludera filer och mappar vars namn börjar med en punkt (t.ex. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Inställningar sparade."
+  },
+  "optionsPageTitle": {
+    "message": "Åtkomstleverantör för lokal hemmapp — Alternativ"
+  },
+  "bannerChecking": {
+    "message": "Kontrollerar anslutning för inbyggd meddelandehantering…"
+  },
+  "bannerOkTitle": {
+    "message": "Hjälpprogrammet för inbyggd meddelandehantering körs"
+  },
+  "bannerOkDetail": {
+    "message": "Hjälpprogrammet för det lokala filsystemet är installerat och svarar korrekt."
+  },
+  "bannerErrorTitle": {
+    "message": "Hjälpprogrammet för inbyggd meddelandehantering hittades inte"
+  },
+  "bannerErrorDetail": {
+    "message": "Hjälpprogrammet är inte installerat eller svarar inte. Följ installationsinstruktionerna nedan för att komma igång."
+  },
+  "optionsSetupHeading": {
+    "message": "Konfiguration krävs — Hur det fungerar"
+  },
+  "termVFS": {
+    "message": "VFS (Virtuellt filsystem)"
+  },
+  "termNativeMessaging": {
+    "message": "Inbyggd meddelandehantering"
+  },
+  "optionsIntroP1": {
+    "message": "Det här tillägget ger filsystemsåtkomst till din lokala hemmapp till alla WebExtensions som använder $TOOLKIT$. Efter att åtkomst beviljats kan dessa WebExtensions läsa och skriva filer i din hemmapp. Eftersom moderna WebExtensions inte kan komma åt det lokala filsystemet direkt, använder det Mozillas $NATIVEMSG$ för att kommunicera med ett litet hjälpprogram på din dator.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "Arkitekturen har två delar:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Det här tillägget tar emot filsystemsförfrågningar från konsumenttillägg och vidarebefordrar dem till det inbyggda hjälpprogrammet via en säker lokal kanal."
+  },
+  "optionsArchitectureLi2": {
+    "message": "Det inbyggda hjälpprogrammet körs på din dator och utför de faktiska filsystemsåtgärderna med din hemkatalog som rot."
+  },
+  "optionsIntroP2": {
+    "message": "Kom igång genom att ladda ned hjälpprogrampaketet, packa upp det och kör det medföljande installationsskriptet. Detta registrerar hjälpprogrammet hos Thunderbird så att tillägget kan kommunicera med det."
+  },
+  "optionsSecurityNotice": {
+    "message": "Säkerhetsmeddelande: Att bevilja åtkomst till filsystemet har säkerhetskonsekvenser. Överväg om du verkligen behöver direkt filsystemsåtkomst, eller om en mindre påträngande lagringsbakände kan fungera lika bra."
+  },
+  "optionsDownloadTitle": {
+    "message": "Hjälpprogram för inbyggd meddelandehantering"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Efter nedladdning, packa upp paketet, öppna en terminal i den uppackade mappen och kör skriptet för din plattform:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Starta om Thunderbird efter installationen. Python 3 måste vara installerat på ditt system."
+  },
+  "optionsGrantedHeading": {
+    "message": "Beviljad åtkomst"
+  },
+  "optionsThAddon": {
+    "message": "Tillägg"
+  },
+  "optionsThAccessLevel": {
+    "message": "Åtkomstnivå"
+  },
+  "optionsEmptyState": {
+    "message": "Inga tillägg har beviljats åtkomst ännu."
+  },
+  "optionsNotice": {
+    "message": "Att återkalla åtkomst tar omedelbart bort den lagrade anslutningen. Tillägget förlorar åtkomsten till hemmappen vid nästa förfrågan."
+  },
+  "accessReadOnly": {
+    "message": "Skrivskyddad"
+  },
+  "accessReadWrite": {
+    "message": "Läs / Skriv"
+  }
+}

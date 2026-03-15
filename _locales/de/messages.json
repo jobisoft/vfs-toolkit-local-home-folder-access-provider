@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Anbieter für lokalen Home-Ordner-Zugriff"
+  },
+  "extensionDescription": {
+    "message": "Ein Anbieter-Add-on für WebExtensions, das das VFS-Toolkit verwendet und den lokalen Home-Ordner über Native Messaging zugänglich macht."
+  },
+  "providerName": {
+    "message": "Lokaler Home-Ordner"
+  },
+  "btnCancel": {
+    "message": "Abbrechen"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Zugriff gewähren"
+  },
+  "btnDownload": {
+    "message": "Herunterladen"
+  },
+  "btnRevoke": {
+    "message": "Widerrufen"
+  },
+  "setupTitle": {
+    "message": "Anbieter für lokalen Home-Ordner-Zugriff"
+  },
+  "setupQuestion": {
+    "message": "Dem Add-on \"$ADDON_NAME$\" Zugriff auf Ihren lokalen Home-Ordner gewähren?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "Der Zugriff für das Add-on \"$ADDON_NAME$\" wurde bereits gewährt.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Nur-Lese-Zugriff"
+  },
+  "setupReadonlyDesc": {
+    "message": "Das Add-on kann Dateien im Home-Ordner durchsuchen und lesen, aber nichts erstellen, ändern oder löschen."
+  },
+  "setupReadwriteTitle": {
+    "message": "Lese-/Schreibzugriff"
+  },
+  "setupReadwriteDesc": {
+    "message": "Das Add-on kann Dateien und Ordner im Home-Ordner lesen, erstellen, ändern und löschen."
+  },
+  "configTitle": {
+    "message": "Lokaler Home-Ordner — Einstellungen"
+  },
+  "configSectionFileListing": {
+    "message": "Dateiliste"
+  },
+  "configShowHiddenTitle": {
+    "message": "Versteckte Dateien anzeigen"
+  },
+  "configShowHiddenDesc": {
+    "message": "Dateien und Ordner einbeziehen, deren Name mit einem Punkt beginnt (z. B. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Einstellungen gespeichert."
+  },
+  "optionsPageTitle": {
+    "message": "Anbieter für lokalen Home-Ordner-Zugriff — Optionen"
+  },
+  "bannerChecking": {
+    "message": "Native-Messaging-Verbindung wird geprüft…"
+  },
+  "bannerOkTitle": {
+    "message": "Native-Messaging-Helfer läuft"
+  },
+  "bannerOkDetail": {
+    "message": "Der lokale Dateisystem-Helfer ist installiert und antwortet korrekt."
+  },
+  "bannerErrorTitle": {
+    "message": "Native-Messaging-Helfer nicht gefunden"
+  },
+  "bannerErrorDetail": {
+    "message": "Die Hilfsanwendung ist nicht installiert oder antwortet nicht. Folgen Sie den Einrichtungsanweisungen unten, um zu beginnen."
+  },
+  "optionsSetupHeading": {
+    "message": "Einrichtung erforderlich — So funktioniert es"
+  },
+  "termVFS": {
+    "message": "VFS (Virtuelles Dateisystem)"
+  },
+  "termNativeMessaging": {
+    "message": "Native Messaging"
+  },
+  "optionsIntroP1": {
+    "message": "Dieses Add-on stellt WebExtensions, die das $TOOLKIT$ verwenden, Zugriff auf das Dateisystem Ihres lokalen Home-Ordners bereit. Nach der Genehmigung können diese WebExtensions Dateien in Ihrem Home-Ordner lesen und schreiben. Da moderne WebExtensions nicht direkt auf das lokale Dateisystem zugreifen können, kommuniziert es über Mozillas $NATIVEMSG$ mit einer kleinen Hilfsanwendung auf Ihrem Computer.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "Die Architektur besteht aus zwei Teilen:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Dieses Add-on empfängt Dateisystemanfragen von Consumer-Erweiterungen und leitet sie über eine sichere lokale Pipe an den nativen Helfer weiter."
+  },
+  "optionsArchitectureLi2": {
+    "message": "Der native Helfer läuft auf Ihrem Computer und führt die eigentlichen Dateisystemoperationen durch, mit Ihrem Home-Verzeichnis als Wurzel."
+  },
+  "optionsIntroP2": {
+    "message": "Laden Sie zunächst das Helferpaket herunter, entpacken Sie es und führen Sie das enthaltene Installationsskript aus. Dadurch wird der Helfer bei Thunderbird registriert, sodass das Add-on mit ihm kommunizieren kann."
+  },
+  "optionsSecurityNotice": {
+    "message": "Sicherheitshinweis: Das Gewähren von Dateisystemzugriff hat Sicherheitsauswirkungen. Überlegen Sie, ob Sie wirklich direkten Dateisystemzugriff benötigen oder ob ein weniger invasives Speicher-Backend ausreichen würde."
+  },
+  "optionsDownloadTitle": {
+    "message": "Native-Messaging-Helfer"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Entpacken Sie nach dem Herunterladen das Paket, öffnen Sie ein Terminal im entpackten Ordner und führen Sie das Skript für Ihre Plattform aus:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Starten Sie Thunderbird nach der Installation neu. Python 3 muss auf Ihrem System installiert sein."
+  },
+  "optionsGrantedHeading": {
+    "message": "Gewährte Zugriffe"
+  },
+  "optionsThAddon": {
+    "message": "Add-on"
+  },
+  "optionsThAccessLevel": {
+    "message": "Zugriffsebene"
+  },
+  "optionsEmptyState": {
+    "message": "Es wurde noch keiner Erweiterung Zugriff gewährt."
+  },
+  "optionsNotice": {
+    "message": "Das Widerrufen des Zugriffs entfernt die gespeicherte Verbindung sofort. Die Erweiterung verliert beim nächsten Zugriff den Zugang zu Ihrem Home-Ordner."
+  },
+  "accessReadOnly": {
+    "message": "Nur Lesen"
+  },
+  "accessReadWrite": {
+    "message": "Lesen / Schreiben"
+  }
+}

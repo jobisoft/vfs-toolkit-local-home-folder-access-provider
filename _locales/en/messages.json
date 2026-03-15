@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Local Home Folder Access Provider"
+  },
+  "extensionDescription": {
+    "message": "A provider add-on for WebExtensions using the VFS toolkit, that exposes the local home folder via native messaging."
+  },
+  "providerName": {
+    "message": "Local Home Folder"
+  },
+  "btnCancel": {
+    "message": "Cancel"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Grant Access"
+  },
+  "btnDownload": {
+    "message": "Download"
+  },
+  "btnRevoke": {
+    "message": "Revoke"
+  },
+  "setupTitle": {
+    "message": "Local Home Folder Access Provider"
+  },
+  "setupQuestion": {
+    "message": "Grant add-on \"$ADDON_NAME$\" access to your local home folder?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "Access for add-on \"$ADDON_NAME$\" has already been granted.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Read only access"
+  },
+  "setupReadonlyDesc": {
+    "message": "The add-on can browse and read files in your home folder, but cannot create, modify, or delete anything."
+  },
+  "setupReadwriteTitle": {
+    "message": "Read/write access"
+  },
+  "setupReadwriteDesc": {
+    "message": "The add-on can read, create, modify, and delete files and folders in your home folder."
+  },
+  "configTitle": {
+    "message": "Local Home Folder — Settings"
+  },
+  "configSectionFileListing": {
+    "message": "File Listing"
+  },
+  "configShowHiddenTitle": {
+    "message": "Show hidden files"
+  },
+  "configShowHiddenDesc": {
+    "message": "Include files and folders whose name starts with a dot (e.g. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Settings saved."
+  },
+  "optionsPageTitle": {
+    "message": "Local Home Folder Access Provider — Options"
+  },
+  "bannerChecking": {
+    "message": "Checking native messaging connection…"
+  },
+  "bannerOkTitle": {
+    "message": "Native messaging helper is running"
+  },
+  "bannerOkDetail": {
+    "message": "The local file system helper is installed and responding correctly."
+  },
+  "bannerErrorTitle": {
+    "message": "Native messaging helper not found"
+  },
+  "bannerErrorDetail": {
+    "message": "The helper application is not installed or not responding. Follow the setup instructions below to get started."
+  },
+  "optionsSetupHeading": {
+    "message": "Setup Required — How It Works"
+  },
+  "termVFS": {
+    "message": "VFS (Virtual File System)"
+  },
+  "termNativeMessaging": {
+    "message": "Native Messaging"
+  },
+  "optionsIntroP1": {
+    "message": "This add-on provides filesystem access to your local home folder to any WebExtension using the $TOOLKIT$. After granting access, these WebExtensions can read/write files in your home folder. Because modern WebExtensions cannot directly access the local file system, it uses Mozilla's $NATIVEMSG$ to communicate with a small helper application running on your computer.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "The architecture has two parts:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "This add-on receives file system requests from consumer extensions and forwards them to the native helper over a secure local pipe."
+  },
+  "optionsArchitectureLi2": {
+    "message": "The native helper runs on your computer and performs the actual file system operations, rooted at your home directory."
+  },
+  "optionsIntroP2": {
+    "message": "To get started, download the helper package, extract it, and run the included install script. This registers the helper with Thunderbird so the add-on can communicate with it."
+  },
+  "optionsSecurityNotice": {
+    "message": "Security notice: Granting file system access has security implications. Consider whether you really need direct file system access, or if a less intrusive storage backend might work as well."
+  },
+  "optionsDownloadTitle": {
+    "message": "Native Messaging Helper"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "After downloading, extract the package, open a terminal in the extracted folder, and run the script for your platform:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Restart Thunderbird after installation. Python 3 must be installed on your system."
+  },
+  "optionsGrantedHeading": {
+    "message": "Granted Access"
+  },
+  "optionsThAddon": {
+    "message": "Add-on"
+  },
+  "optionsThAccessLevel": {
+    "message": "Access Level"
+  },
+  "optionsEmptyState": {
+    "message": "No extensions have been granted access yet."
+  },
+  "optionsNotice": {
+    "message": "Revoking access removes the stored connection immediately. The extension will lose access to your home folder on its next request."
+  },
+  "accessReadOnly": {
+    "message": "Read only"
+  },
+  "accessReadWrite": {
+    "message": "Read / Write"
+  }
+}

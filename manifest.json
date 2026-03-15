@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vfs-toolkit-local-home-folder-provider@jobisoft.de",
+      "strict_min_version": "128.0"
+    }
+  },
+  "name": "__MSG_extensionName__",
+  "version": "1.0.0",
+  "author": "John Bieling",
+  "homepage_url": "https://github.com/jobisoft/Local-Home-Folder-Access-Provider",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "nativeMessaging",
+    "downloads"
+  ],
+  "background": {
+    "type": "module",
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "128": "icon.svg"
+  },
+  "options_ui": {
+    "page": "options/options.html"
+  }
+}

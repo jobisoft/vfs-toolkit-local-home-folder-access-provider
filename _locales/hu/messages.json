@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Helyi saját mappa hozzáférés-szolgáltató"
+  },
+  "extensionDescription": {
+    "message": "Egy WebExtensions számára készült szolgáltató kiegészítő, amely a VFS eszközkészletet használja, és natív üzenetküldésen keresztül teszi elérhetővé a helyi saját mappát."
+  },
+  "providerName": {
+    "message": "Helyi saját mappa"
+  },
+  "btnCancel": {
+    "message": "Mégse"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Hozzáférés engedélyezése"
+  },
+  "btnDownload": {
+    "message": "Letöltés"
+  },
+  "btnRevoke": {
+    "message": "Visszavonás"
+  },
+  "setupTitle": {
+    "message": "Helyi saját mappa hozzáférés-szolgáltató"
+  },
+  "setupQuestion": {
+    "message": "Engedélyezi a(z) \"$ADDON_NAME$\" kiegészítő hozzáférését a helyi saját mappájához?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "A(z) \"$ADDON_NAME$\" kiegészítő hozzáférése már engedélyezve van.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Csak olvasási hozzáférés"
+  },
+  "setupReadonlyDesc": {
+    "message": "A kiegészítő böngészheti és olvashatja a saját mappában lévő fájlokat, de nem hozhat létre, módosíthat vagy törölhet semmit."
+  },
+  "setupReadwriteTitle": {
+    "message": "Olvasási/írási hozzáférés"
+  },
+  "setupReadwriteDesc": {
+    "message": "A kiegészítő olvashatja, létrehozhatja, módosíthatja és törölheti a saját mappában lévő fájlokat és mappákat."
+  },
+  "configTitle": {
+    "message": "Helyi saját mappa — Beállítások"
+  },
+  "configSectionFileListing": {
+    "message": "Fájllistázás"
+  },
+  "configShowHiddenTitle": {
+    "message": "Rejtett fájlok megjelenítése"
+  },
+  "configShowHiddenDesc": {
+    "message": "Ponttal kezdődő nevű fájlok és mappák megjelenítése (pl. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Beállítások mentve."
+  },
+  "optionsPageTitle": {
+    "message": "Helyi saját mappa hozzáférés-szolgáltató — Beállítások"
+  },
+  "bannerChecking": {
+    "message": "Natív üzenetküldési kapcsolat ellenőrzése…"
+  },
+  "bannerOkTitle": {
+    "message": "A natív üzenetküldési segítő fut"
+  },
+  "bannerOkDetail": {
+    "message": "A helyi fájlrendszer-segítő telepítve van és megfelelően válaszol."
+  },
+  "bannerErrorTitle": {
+    "message": "A natív üzenetküldési segítő nem található"
+  },
+  "bannerErrorDetail": {
+    "message": "A segítő alkalmazás nincs telepítve vagy nem válaszol. A kezdéshez kövesse az alábbi beállítási utasításokat."
+  },
+  "optionsSetupHeading": {
+    "message": "Beállítás szükséges — Hogyan működik"
+  },
+  "termVFS": {
+    "message": "VFS (Virtuális fájlrendszer)"
+  },
+  "termNativeMessaging": {
+    "message": "Natív üzenetküldés"
+  },
+  "optionsIntroP1": {
+    "message": "Ez a kiegészítő $TOOLKIT$-et használó WebExtensions számára biztosít hozzáférést a helyi saját mappájához. A hozzáférés megadása után ezek a WebExtensions olvashatják és írhatják a saját mappájában lévő fájlokat. Mivel a modern WebExtensions nem tud közvetlenül hozzáférni a helyi fájlrendszerhez, a Mozilla $NATIVEMSG$ protokollján keresztül kommunikál egy, a számítógépén futó kis segítő alkalmazással.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "Az architektúra két részből áll:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Ez a kiegészítő fogadja a fájlrendszer-kéréseket a fogyasztói kiterjesztésektől, és továbbítja azokat a natív segítőnek egy biztonságos helyi csövön keresztül."
+  },
+  "optionsArchitectureLi2": {
+    "message": "A natív segítő a számítógépen fut, és elvégzi a tényleges fájlrendszer-műveleteket, a saját könyvtárat használva gyökérként."
+  },
+  "optionsIntroP2": {
+    "message": "A kezdéshez töltse le a segítő csomagot, csomagolja ki, és futtassa a mellékelt telepítési szkriptet. Ez regisztrálja a segítőt a Thunderbirdben, hogy a kiegészítő kommunikálni tudjon vele."
+  },
+  "optionsSecurityNotice": {
+    "message": "Biztonsági figyelmeztetés: A fájlrendszer-hozzáférés megadásának biztonsági vonatkozásai vannak. Fontolja meg, hogy valóban szüksége van-e közvetlen fájlrendszer-hozzáférésre, vagy egy kevésbé tolakodó tárolóháttér is megfelelne."
+  },
+  "optionsDownloadTitle": {
+    "message": "Natív üzenetküldési segítő"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "A letöltés után csomagolja ki a csomagot, nyisson meg egy terminált a kicsomagolt mappában, és futtassa a platformjának megfelelő szkriptet:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "A telepítés után indítsa újra a Thunderbirdet. A Python 3-nak telepítve kell lennie a rendszeren."
+  },
+  "optionsGrantedHeading": {
+    "message": "Megadott hozzáférések"
+  },
+  "optionsThAddon": {
+    "message": "Kiegészítő"
+  },
+  "optionsThAccessLevel": {
+    "message": "Hozzáférési szint"
+  },
+  "optionsEmptyState": {
+    "message": "Még egy kiterjesztés sem kapott hozzáférést."
+  },
+  "optionsNotice": {
+    "message": "A hozzáférés visszavonása azonnal eltávolítja a tárolt kapcsolatot. A kiterjesztés a következő kéréskor elveszíti a saját mappához való hozzáférést."
+  },
+  "accessReadOnly": {
+    "message": "Csak olvasás"
+  },
+  "accessReadWrite": {
+    "message": "Olvasás / Írás"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Fournisseur d'accès au dossier personnel local"
+  },
+  "extensionDescription": {
+    "message": "Un module complémentaire fournisseur pour WebExtensions utilisant la boîte à outils VFS, qui expose le dossier personnel local via la messagerie native."
+  },
+  "providerName": {
+    "message": "Dossier personnel local"
+  },
+  "btnCancel": {
+    "message": "Annuler"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Accorder l'accès"
+  },
+  "btnDownload": {
+    "message": "Télécharger"
+  },
+  "btnRevoke": {
+    "message": "Révoquer"
+  },
+  "setupTitle": {
+    "message": "Fournisseur d'accès au dossier personnel local"
+  },
+  "setupQuestion": {
+    "message": "Accorder au module complémentaire « $ADDON_NAME$ » l'accès à votre dossier personnel local ?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "L'accès pour le module complémentaire « $ADDON_NAME$ » a déjà été accordé.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Accès en lecture seule"
+  },
+  "setupReadonlyDesc": {
+    "message": "Le module complémentaire peut parcourir et lire les fichiers de votre dossier personnel, mais ne peut rien créer, modifier ni supprimer."
+  },
+  "setupReadwriteTitle": {
+    "message": "Accès en lecture et écriture"
+  },
+  "setupReadwriteDesc": {
+    "message": "Le module complémentaire peut lire, créer, modifier et supprimer des fichiers et des dossiers dans votre dossier personnel."
+  },
+  "configTitle": {
+    "message": "Dossier personnel local — Paramètres"
+  },
+  "configSectionFileListing": {
+    "message": "Liste des fichiers"
+  },
+  "configShowHiddenTitle": {
+    "message": "Afficher les fichiers cachés"
+  },
+  "configShowHiddenDesc": {
+    "message": "Inclure les fichiers et dossiers dont le nom commence par un point (ex. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Paramètres enregistrés."
+  },
+  "optionsPageTitle": {
+    "message": "Fournisseur d'accès au dossier personnel local — Options"
+  },
+  "bannerChecking": {
+    "message": "Vérification de la connexion de messagerie native…"
+  },
+  "bannerOkTitle": {
+    "message": "L'assistant de messagerie native est en cours d'exécution"
+  },
+  "bannerOkDetail": {
+    "message": "L'assistant du système de fichiers local est installé et répond correctement."
+  },
+  "bannerErrorTitle": {
+    "message": "Assistant de messagerie native introuvable"
+  },
+  "bannerErrorDetail": {
+    "message": "L'application auxiliaire n'est pas installée ou ne répond pas. Suivez les instructions de configuration ci-dessous pour commencer."
+  },
+  "optionsSetupHeading": {
+    "message": "Configuration requise — Comment ça fonctionne"
+  },
+  "termVFS": {
+    "message": "VFS (Système de fichiers virtuel)"
+  },
+  "termNativeMessaging": {
+    "message": "Messagerie native"
+  },
+  "optionsIntroP1": {
+    "message": "Ce module complémentaire fournit un accès au système de fichiers de votre dossier personnel local à toute WebExtension utilisant le $TOOLKIT$. Après avoir accordé l'accès, ces WebExtensions peuvent lire et écrire des fichiers dans votre dossier personnel. Les WebExtensions modernes ne pouvant pas accéder directement au système de fichiers local, il utilise le $NATIVEMSG$ de Mozilla pour communiquer avec une petite application auxiliaire sur votre ordinateur.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "L'architecture comporte deux parties :"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Ce module complémentaire reçoit les demandes du système de fichiers des extensions consommatrices et les transmet à l'assistant natif via un canal local sécurisé."
+  },
+  "optionsArchitectureLi2": {
+    "message": "L'assistant natif s'exécute sur votre ordinateur et effectue les opérations réelles du système de fichiers, avec votre répertoire personnel comme racine."
+  },
+  "optionsIntroP2": {
+    "message": "Pour commencer, téléchargez le paquet de l'assistant, extrayez-le et exécutez le script d'installation inclus. Cela enregistre l'assistant auprès de Thunderbird afin que le module complémentaire puisse communiquer avec lui."
+  },
+  "optionsSecurityNotice": {
+    "message": "Avertissement de sécurité : Accorder l'accès au système de fichiers a des implications en matière de sécurité. Demandez-vous si vous avez vraiment besoin d'un accès direct au système de fichiers, ou si un backend de stockage moins intrusif pourrait convenir."
+  },
+  "optionsDownloadTitle": {
+    "message": "Assistant de messagerie native"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Après le téléchargement, extrayez le paquet, ouvrez un terminal dans le dossier extrait et exécutez le script correspondant à votre plateforme :"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Redémarrez Thunderbird après l'installation. Python 3 doit être installé sur votre système."
+  },
+  "optionsGrantedHeading": {
+    "message": "Accès accordés"
+  },
+  "optionsThAddon": {
+    "message": "Module complémentaire"
+  },
+  "optionsThAccessLevel": {
+    "message": "Niveau d'accès"
+  },
+  "optionsEmptyState": {
+    "message": "Aucune extension n'a encore reçu l'accès."
+  },
+  "optionsNotice": {
+    "message": "La révocation de l'accès supprime immédiatement la connexion enregistrée. L'extension perdra l'accès à votre dossier personnel lors de sa prochaine demande."
+  },
+  "accessReadOnly": {
+    "message": "Lecture seule"
+  },
+  "accessReadWrite": {
+    "message": "Lecture / Écriture"
+  }
+}

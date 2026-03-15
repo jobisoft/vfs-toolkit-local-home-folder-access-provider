@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="setup.js" type="module"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 24px;
+      font-size: 13px;
+      min-width: 420px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .header img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    p#msg {
+      color: #475569;
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+
+    .access-options {
+      margin: 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .access-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .access-option:hover {
+      border-color: #3b82f6;
+      background: #f0f7ff;
+    }
+
+    .access-option input[type="radio"] {
+      margin: 2px 0 0;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+
+    .access-option label {
+      cursor: pointer;
+    }
+
+    .access-option .option-title {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 2px;
+    }
+
+    .access-option .option-desc {
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .access-option.selected {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    button {
+      padding: 7px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    #grant-btn {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    #grant-btn:hover:not(:disabled) {
+      background: #1d4ed8;
+    }
+
+    #grant-btn:disabled {
+      background: #93c5fd;
+      cursor: not-allowed;
+    }
+
+    #cancel-btn {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    #cancel-btn:hover {
+      background: #e2e8f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="../icon.svg" alt="" />
+    <h2 data-i18n-content="setupTitle"></h2>
+  </div>
+  <p id="msg" data-i18n-content="setupQuestion"></p>
+  <div class="access-options" id="access-options">
+    <div class="access-option" id="opt-readonly">
+      <input type="radio" name="access" id="radio-readonly" value="readonly" />
+      <label for="radio-readonly">
+        <div class="option-title" data-i18n-content="setupReadonlyTitle"></div>
+        <div class="option-desc" data-i18n-content="setupReadonlyDesc"></div>
+      </label>
+    </div>
+    <div class="access-option" id="opt-readwrite">
+      <input type="radio" name="access" id="radio-readwrite" value="readwrite" />
+      <label for="radio-readwrite">
+        <div class="option-title" data-i18n-content="setupReadwriteTitle"></div>
+        <div class="option-desc" data-i18n-content="setupReadwriteDesc"></div>
+      </label>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="cancel-btn" data-i18n-content="btnCancel"></button>
+    <button id="grant-btn" disabled data-i18n-content="btnGrantAccess"></button>
+  </div>
+</body>
+
+</html>

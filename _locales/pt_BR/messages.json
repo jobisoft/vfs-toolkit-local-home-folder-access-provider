@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Provedor de acesso à pasta pessoal local"
+  },
+  "extensionDescription": {
+    "message": "Um complemento provedor para WebExtensions que usa o kit de ferramentas VFS para expor a pasta pessoal local via mensagem nativa."
+  },
+  "providerName": {
+    "message": "Pasta pessoal local"
+  },
+  "btnCancel": {
+    "message": "Cancelar"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Conceder acesso"
+  },
+  "btnDownload": {
+    "message": "Baixar"
+  },
+  "btnRevoke": {
+    "message": "Revogar"
+  },
+  "setupTitle": {
+    "message": "Provedor de acesso à pasta pessoal local"
+  },
+  "setupQuestion": {
+    "message": "Conceder ao complemento «$ADDON_NAME$» acesso à sua pasta pessoal local?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "O acesso para o complemento «$ADDON_NAME$» já foi concedido.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Acesso somente leitura"
+  },
+  "setupReadonlyDesc": {
+    "message": "O complemento pode navegar e ler arquivos na pasta pessoal, mas não pode criar, modificar ou excluir nada."
+  },
+  "setupReadwriteTitle": {
+    "message": "Acesso de leitura e escrita"
+  },
+  "setupReadwriteDesc": {
+    "message": "O complemento pode ler, criar, modificar e excluir arquivos e pastas na pasta pessoal."
+  },
+  "configTitle": {
+    "message": "Pasta pessoal local — Configurações"
+  },
+  "configSectionFileListing": {
+    "message": "Listagem de arquivos"
+  },
+  "configShowHiddenTitle": {
+    "message": "Mostrar arquivos ocultos"
+  },
+  "configShowHiddenDesc": {
+    "message": "Incluir arquivos e pastas cujo nome começa com um ponto (ex.: .bashrc)."
+  },
+  "configSaved": {
+    "message": "Configurações salvas."
+  },
+  "optionsPageTitle": {
+    "message": "Provedor de acesso à pasta pessoal local — Opções"
+  },
+  "bannerChecking": {
+    "message": "Verificando conexão de mensagem nativa…"
+  },
+  "bannerOkTitle": {
+    "message": "O auxiliar de mensagem nativa está em execução"
+  },
+  "bannerOkDetail": {
+    "message": "O auxiliar do sistema de arquivos local está instalado e respondendo corretamente."
+  },
+  "bannerErrorTitle": {
+    "message": "Auxiliar de mensagem nativa não encontrado"
+  },
+  "bannerErrorDetail": {
+    "message": "O aplicativo auxiliar não está instalado ou não está respondendo. Siga as instruções de configuração abaixo para começar."
+  },
+  "optionsSetupHeading": {
+    "message": "Configuração necessária — Como funciona"
+  },
+  "termVFS": {
+    "message": "VFS (Sistema de arquivos virtual)"
+  },
+  "termNativeMessaging": {
+    "message": "Mensagem nativa"
+  },
+  "optionsIntroP1": {
+    "message": "Este complemento fornece acesso ao sistema de arquivos da sua pasta pessoal local a qualquer WebExtension que use o $TOOLKIT$. Após conceder o acesso, essas WebExtensions podem ler e escrever arquivos na sua pasta pessoal. Como as WebExtensions modernas não podem acessar diretamente o sistema de arquivos local, ele usa o $NATIVEMSG$ da Mozilla para se comunicar com um pequeno aplicativo auxiliar em execução no seu computador.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "A arquitetura tem duas partes:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Este complemento recebe solicitações do sistema de arquivos de extensões consumidoras e as encaminha ao auxiliar nativo por meio de um canal local seguro."
+  },
+  "optionsArchitectureLi2": {
+    "message": "O auxiliar nativo é executado no seu computador e realiza as operações reais do sistema de arquivos, com seu diretório pessoal como raiz."
+  },
+  "optionsIntroP2": {
+    "message": "Para começar, baixe o pacote auxiliar, extraia-o e execute o script de instalação incluído. Isso registra o auxiliar no Thunderbird para que o complemento possa se comunicar com ele."
+  },
+  "optionsSecurityNotice": {
+    "message": "Aviso de segurança: Conceder acesso ao sistema de arquivos tem implicações de segurança. Considere se você realmente precisa de acesso direto ao sistema de arquivos ou se um backend de armazenamento menos intrusivo poderia funcionar igualmente bem."
+  },
+  "optionsDownloadTitle": {
+    "message": "Auxiliar de mensagem nativa"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Após o download, extraia o pacote, abra um terminal na pasta extraída e execute o script para sua plataforma:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Reinicie o Thunderbird após a instalação. O Python 3 deve estar instalado no sistema."
+  },
+  "optionsGrantedHeading": {
+    "message": "Acessos concedidos"
+  },
+  "optionsThAddon": {
+    "message": "Complemento"
+  },
+  "optionsThAccessLevel": {
+    "message": "Nível de acesso"
+  },
+  "optionsEmptyState": {
+    "message": "Nenhuma extensão recebeu acesso ainda."
+  },
+  "optionsNotice": {
+    "message": "Revogar o acesso remove imediatamente a conexão armazenada. A extensão perderá o acesso à pasta pessoal na próxima solicitação."
+  },
+  "accessReadOnly": {
+    "message": "Somente leitura"
+  },
+  "accessReadWrite": {
+    "message": "Leitura / Escrita"
+  }
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title data-i18n-content="optionsPageTitle"></title>
+  <script src="options.js" type="module"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 32px;
+      font-size: 14px;
+      color: #1e293b;
+      background: #f8fafc;
+      min-width: 600px;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .page-header img {
+      width: 52px;
+      height: 52px;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-header p {
+      margin: 4px 0 0;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    /* Connection banner */
+    .banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .banner svg {
+      flex-shrink: 0;
+    }
+
+    .banner .banner-text {
+      flex: 1;
+      line-height: 1.5;
+    }
+
+    .banner .banner-text strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    .banner-checking {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    .banner-ok {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #166534;
+    }
+
+    .banner-error {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      color: #991b1b;
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #cbd5e1;
+      border-top-color: #64748b;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Sections */
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* Introduction */
+    .intro p {
+      margin: 0 0 12px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro ol {
+      margin: 0 0 12px;
+      padding-left: 20px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .intro code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #1e293b;
+    }
+
+    .intro strong {
+      color: #1e293b;
+    }
+
+    .warning-banner {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 16px 0 0;
+      font-size: 13px;
+      color: #991b1b;
+      line-height: 1.6;
+    }
+
+    .warning-banner strong {
+      color: #7f1d1d;
+    }
+
+    .download-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #f0f7ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+
+    .download-box svg {
+      flex-shrink: 0;
+      color: #2563eb;
+    }
+
+    .download-box .dl-text {
+      flex: 1;
+    }
+
+    .download-box .dl-text strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #1e3a8a;
+    }
+
+    .download-box .dl-text span {
+      font-size: 12px;
+      color: #3b82f6;
+    }
+
+    .download-box a {
+      display: inline-block;
+      padding: 7px 16px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .download-box a:hover {
+      background: #1d4ed8;
+    }
+
+    /* Connections table */
+    .connections-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .connections-header h2 {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+      color: #64748b;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: #fafbfc;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .badge-read {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .badge-write {
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .revoke-btn {
+      padding: 4px 12px;
+      background: #fff;
+      border: 1px solid #fca5a5;
+      color: #dc2626;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    .revoke-btn:hover {
+      background: #fef2f2;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 32px;
+      color: #94a3b8;
+    }
+
+    .empty-state svg {
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .notice {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #78350f;
+      line-height: 1.5;
+    }
+
+    .notice svg {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Connection status banner -->
+    <div id="banner" class="banner banner-checking">
+      <div class="spinner" id="banner-spinner"></div>
+      <svg id="banner-icon-ok" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
+      </svg>
+      <svg id="banner-icon-err" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
+      </svg>
+      <div class="banner-text">
+        <strong id="banner-title" data-i18n-content="bannerChecking"></strong>
+        <span id="banner-detail"></span>
+      </div>
+    </div>
+
+    <!-- Section 1: Introduction (hidden when connected) -->
+    <div id="intro-section" class="section intro" style="display:none">
+      <h2 data-i18n-content="optionsSetupHeading"></h2>
+      <p id="intro-p1"></p>
+      <p data-i18n-content="optionsArchitectureP"></p>
+      <ol>
+        <li data-i18n-content="optionsArchitectureLi1"></li>
+        <li data-i18n-content="optionsArchitectureLi2"></li>
+      </ol>
+      <p data-i18n-content="optionsIntroP2"></p>
+      <div class="warning-banner" data-i18n-content="optionsSecurityNotice"></div>
+
+      <div class="download-box">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        <div class="dl-text">
+          <strong data-i18n-content="optionsDownloadTitle"></strong>
+          <span data-i18n-content="optionsDownloadFilename"></span>
+        </div>
+        <a id="download-link" href="#" data-i18n-content="btnDownload"></a>
+      </div>
+
+      <p data-i18n-content="optionsInstructionsP"></p>
+      <ul style="margin: 0 0 12px; padding-left: 20px; line-height: 1.7; color: #475569;">
+        <li><strong>Linux / macOS:</strong> <code>bash install.sh</code></li>
+        <li><strong>Windows:</strong> double-click <code>install.bat</code>, or run it from a Command Prompt</li>
+      </ul>
+      <p data-i18n-content="optionsInstructionsRestart"></p>
+    </div>
+
+    <!-- Section 2: Granted Access -->
+    <div class="section">
+      <div class="connections-header">
+        <h2 data-i18n-content="optionsGrantedHeading"></h2>
+      </div>
+      <div class="table-wrap">
+        <table id="connections-table">
+          <thead>
+            <tr>
+              <th data-i18n-content="optionsThAddon"></th>
+              <th data-i18n-content="optionsThAccessLevel"></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="connections-body">
+            <!-- populated by options.js -->
+          </tbody>
+        </table>
+      </div>
+      <div id="empty-state" class="empty-state" style="display:none">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        </svg>
+        <span data-i18n-content="optionsEmptyState"></span>
+      </div>
+      <div class="notice">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        <span data-i18n-content="optionsNotice"></span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

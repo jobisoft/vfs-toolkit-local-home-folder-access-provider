@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Poskytovatel přístupu k lokální domovské složce"
+  },
+  "extensionDescription": {
+    "message": "Doplněk poskytovatele pro WebExtensions využívající sadu nástrojů VFS, který zpřístupňuje lokální domovskou složku prostřednictvím nativního zasílání zpráv."
+  },
+  "providerName": {
+    "message": "Lokální domovská složka"
+  },
+  "btnCancel": {
+    "message": "Zrušit"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Udělit přístup"
+  },
+  "btnDownload": {
+    "message": "Stáhnout"
+  },
+  "btnRevoke": {
+    "message": "Odvolat"
+  },
+  "setupTitle": {
+    "message": "Poskytovatel přístupu k lokální domovské složce"
+  },
+  "setupQuestion": {
+    "message": "Udělit doplňku \"$ADDON_NAME$\" přístup k vaší lokální domovské složce?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "Přístup pro doplněk \"$ADDON_NAME$\" byl již udělen.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Přístup pouze pro čtení"
+  },
+  "setupReadonlyDesc": {
+    "message": "Doplněk může procházet a číst soubory v domovské složce, ale nemůže nic vytvářet, upravovat ani mazat."
+  },
+  "setupReadwriteTitle": {
+    "message": "Přístup pro čtení a zápis"
+  },
+  "setupReadwriteDesc": {
+    "message": "Doplněk může číst, vytvářet, upravovat a mazat soubory a složky v domovské složce."
+  },
+  "configTitle": {
+    "message": "Lokální domovská složka — Nastavení"
+  },
+  "configSectionFileListing": {
+    "message": "Výpis souborů"
+  },
+  "configShowHiddenTitle": {
+    "message": "Zobrazit skryté soubory"
+  },
+  "configShowHiddenDesc": {
+    "message": "Zahrnout soubory a složky, jejichž název začíná tečkou (např. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Nastavení uloženo."
+  },
+  "optionsPageTitle": {
+    "message": "Poskytovatel přístupu k lokální domovské složce — Možnosti"
+  },
+  "bannerChecking": {
+    "message": "Kontrola připojení nativního zasílání zpráv…"
+  },
+  "bannerOkTitle": {
+    "message": "Pomocník pro nativní zasílání zpráv je spuštěn"
+  },
+  "bannerOkDetail": {
+    "message": "Pomocník lokálního souborového systému je nainstalován a správně reaguje."
+  },
+  "bannerErrorTitle": {
+    "message": "Pomocník pro nativní zasílání zpráv nebyl nalezen"
+  },
+  "bannerErrorDetail": {
+    "message": "Pomocná aplikace není nainstalována nebo nereaguje. Začněte podle níže uvedených pokynů k nastavení."
+  },
+  "optionsSetupHeading": {
+    "message": "Vyžadováno nastavení — Jak to funguje"
+  },
+  "termVFS": {
+    "message": "VFS (Virtuální souborový systém)"
+  },
+  "termNativeMessaging": {
+    "message": "Nativní zasílání zpráv"
+  },
+  "optionsIntroP1": {
+    "message": "Tento doplněk poskytuje přístup k souborovému systému vaší lokální domovské složky pro všechny WebExtensions využívající $TOOLKIT$. Po udělení přístupu mohou tyto WebExtensions číst a zapisovat soubory ve vaší domovské složce. Protože moderní WebExtensions nemohou přímo přistupovat k lokálnímu souborovému systému, komunikuje s malou pomocnou aplikací na vašem počítači prostřednictvím $NATIVEMSG$ od Mozilly.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "Architektura má dvě části:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Tento doplněk přijímá požadavky na souborový systém od spotřebitelských rozšíření a předává je nativnímu pomocníkovi přes zabezpečené lokální roury."
+  },
+  "optionsArchitectureLi2": {
+    "message": "Nativní pomocník běží ve vašem počítači a provádí skutečné operace se souborovým systémem s kořenem v domovském adresáři."
+  },
+  "optionsIntroP2": {
+    "message": "Začněte stažením balíčku pomocníka, jeho rozbalením a spuštěním přiloženého instalačního skriptu. Tím se pomocník zaregistruje v Thunderbirdu, aby s ním mohl doplněk komunikovat."
+  },
+  "optionsSecurityNotice": {
+    "message": "Bezpečnostní upozornění: Udělení přístupu k souborovému systému má bezpečnostní důsledky. Zvažte, zda skutečně potřebujete přímý přístup k souborovému systému, nebo zda by nestačil méně rušivý úložný backend."
+  },
+  "optionsDownloadTitle": {
+    "message": "Pomocník pro nativní zasílání zpráv"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Po stažení rozbalte balíček, otevřete terminál v rozbalené složce a spusťte skript pro vaši platformu:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Po instalaci restartujte Thunderbird. V systému musí být nainstalován Python 3."
+  },
+  "optionsGrantedHeading": {
+    "message": "Udělené přístupy"
+  },
+  "optionsThAddon": {
+    "message": "Doplněk"
+  },
+  "optionsThAccessLevel": {
+    "message": "Úroveň přístupu"
+  },
+  "optionsEmptyState": {
+    "message": "Zatím nebyl udělen přístup žádnému rozšíření."
+  },
+  "optionsNotice": {
+    "message": "Odvolání přístupu okamžitě odstraní uložené připojení. Rozšíření ztratí přístup k domovské složce při příštím požadavku."
+  },
+  "accessReadOnly": {
+    "message": "Pouze čtení"
+  },
+  "accessReadWrite": {
+    "message": "Čtení / Zápis"
+  }
+}

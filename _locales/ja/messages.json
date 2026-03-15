@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "ローカルホームフォルダーアクセスプロバイダー"
+  },
+  "extensionDescription": {
+    "message": "VFSツールキットを使用してネイティブメッセージング経由でローカルホームフォルダーを公開するWebExtensions向けプロバイダーアドオン。"
+  },
+  "providerName": {
+    "message": "ローカルホームフォルダー"
+  },
+  "btnCancel": {
+    "message": "キャンセル"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "アクセスを許可"
+  },
+  "btnDownload": {
+    "message": "ダウンロード"
+  },
+  "btnRevoke": {
+    "message": "取り消し"
+  },
+  "setupTitle": {
+    "message": "ローカルホームフォルダーアクセスプロバイダー"
+  },
+  "setupQuestion": {
+    "message": "アドオン「$ADDON_NAME$」にローカルホームフォルダーへのアクセスを許可しますか？",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "アドオン「$ADDON_NAME$」のアクセスはすでに許可されています。",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "読み取り専用アクセス"
+  },
+  "setupReadonlyDesc": {
+    "message": "アドオンはホームフォルダー内のファイルを参照・読み取ることができますが、作成・変更・削除はできません。"
+  },
+  "setupReadwriteTitle": {
+    "message": "読み取り/書き込みアクセス"
+  },
+  "setupReadwriteDesc": {
+    "message": "アドオンはホームフォルダー内のファイルやフォルダーを読み取り、作成、変更、削除できます。"
+  },
+  "configTitle": {
+    "message": "ローカルホームフォルダー — 設定"
+  },
+  "configSectionFileListing": {
+    "message": "ファイル一覧"
+  },
+  "configShowHiddenTitle": {
+    "message": "隠しファイルを表示"
+  },
+  "configShowHiddenDesc": {
+    "message": "ドットで始まる名前のファイルやフォルダーを含めます（例：.bashrc）。"
+  },
+  "configSaved": {
+    "message": "設定を保存しました。"
+  },
+  "optionsPageTitle": {
+    "message": "ローカルホームフォルダーアクセスプロバイダー — オプション"
+  },
+  "bannerChecking": {
+    "message": "ネイティブメッセージング接続を確認中…"
+  },
+  "bannerOkTitle": {
+    "message": "ネイティブメッセージングヘルパーが起動中"
+  },
+  "bannerOkDetail": {
+    "message": "ローカルファイルシステムヘルパーがインストールされており、正常に応答しています。"
+  },
+  "bannerErrorTitle": {
+    "message": "ネイティブメッセージングヘルパーが見つかりません"
+  },
+  "bannerErrorDetail": {
+    "message": "ヘルパーアプリケーションがインストールされていないか、応答していません。開始するには以下のセットアップ手順に従ってください。"
+  },
+  "optionsSetupHeading": {
+    "message": "セットアップが必要です — 仕組み"
+  },
+  "termVFS": {
+    "message": "VFS（仮想ファイルシステム）"
+  },
+  "termNativeMessaging": {
+    "message": "ネイティブメッセージング"
+  },
+  "optionsIntroP1": {
+    "message": "このアドオンは、$TOOLKIT$を使用するすべてのWebExtensionsにローカルホームフォルダーへのファイルシステムアクセスを提供します。アクセスを許可すると、これらのWebExtensionsはホームフォルダー内のファイルを読み書きできます。現代のWebExtensionsはローカルファイルシステムに直接アクセスできないため、Mozillaの$NATIVEMSG$を使用してコンピューター上で動作する小さなヘルパーアプリケーションと通信します。",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "アーキテクチャは2つの部分で構成されています："
+  },
+  "optionsArchitectureLi1": {
+    "message": "このアドオンはコンシューマー拡張機能からファイルシステムリクエストを受け取り、セキュアなローカルパイプを通じてネイティブヘルパーに転送します。"
+  },
+  "optionsArchitectureLi2": {
+    "message": "ネイティブヘルパーはコンピューター上で動作し、ホームディレクトリをルートとして実際のファイルシステム操作を行います。"
+  },
+  "optionsIntroP2": {
+    "message": "開始するには、ヘルパーパッケージをダウンロードして展開し、同梱のインストールスクリプトを実行してください。これによりアドオンが通信できるよう、ヘルパーがThunderbirdに登録されます。"
+  },
+  "optionsSecurityNotice": {
+    "message": "セキュリティに関する注意：ファイルシステムへのアクセスを許可するとセキュリティ上の影響があります。直接のファイルシステムアクセスが本当に必要かどうか、またはより侵襲性の低いストレージバックエンドで対応できないかをご検討ください。"
+  },
+  "optionsDownloadTitle": {
+    "message": "ネイティブメッセージングヘルパー"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "ダウンロード後、パッケージを展開し、展開したフォルダーでターミナルを開き、お使いのプラットフォーム用のスクリプトを実行してください："
+  },
+  "optionsInstructionsRestart": {
+    "message": "インストール後にThunderbirdを再起動してください。システムにPython 3がインストールされている必要があります。"
+  },
+  "optionsGrantedHeading": {
+    "message": "許可済みアクセス"
+  },
+  "optionsThAddon": {
+    "message": "アドオン"
+  },
+  "optionsThAccessLevel": {
+    "message": "アクセスレベル"
+  },
+  "optionsEmptyState": {
+    "message": "まだどの拡張機能にもアクセスが許可されていません。"
+  },
+  "optionsNotice": {
+    "message": "アクセスを取り消すと、保存された接続が直ちに削除されます。拡張機能は次のリクエスト時にホームフォルダーへのアクセスを失います。"
+  },
+  "accessReadOnly": {
+    "message": "読み取り専用"
+  },
+  "accessReadWrite": {
+    "message": "読み取り / 書き込み"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Provider di accesso alla cartella home locale"
+  },
+  "extensionDescription": {
+    "message": "Un componente aggiuntivo provider per WebExtensions che utilizza il toolkit VFS per esporre la cartella home locale tramite messaggistica nativa."
+  },
+  "providerName": {
+    "message": "Cartella home locale"
+  },
+  "btnCancel": {
+    "message": "Annulla"
+  },
+  "btnOK": {
+    "message": "OK"
+  },
+  "btnGrantAccess": {
+    "message": "Concedi accesso"
+  },
+  "btnDownload": {
+    "message": "Scarica"
+  },
+  "btnRevoke": {
+    "message": "Revoca"
+  },
+  "setupTitle": {
+    "message": "Provider di accesso alla cartella home locale"
+  },
+  "setupQuestion": {
+    "message": "Concedere al componente aggiuntivo «$ADDON_NAME$» l'accesso alla cartella home locale?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "L'accesso per il componente aggiuntivo «$ADDON_NAME$» è già stato concesso.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Accesso in sola lettura"
+  },
+  "setupReadonlyDesc": {
+    "message": "Il componente aggiuntivo può sfogliare e leggere i file nella cartella home, ma non può creare, modificare o eliminare nulla."
+  },
+  "setupReadwriteTitle": {
+    "message": "Accesso in lettura e scrittura"
+  },
+  "setupReadwriteDesc": {
+    "message": "Il componente aggiuntivo può leggere, creare, modificare ed eliminare file e cartelle nella cartella home."
+  },
+  "configTitle": {
+    "message": "Cartella home locale — Impostazioni"
+  },
+  "configSectionFileListing": {
+    "message": "Elenco file"
+  },
+  "configShowHiddenTitle": {
+    "message": "Mostra file nascosti"
+  },
+  "configShowHiddenDesc": {
+    "message": "Includi file e cartelle il cui nome inizia con un punto (es. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Impostazioni salvate."
+  },
+  "optionsPageTitle": {
+    "message": "Provider di accesso alla cartella home locale — Opzioni"
+  },
+  "bannerChecking": {
+    "message": "Verifica della connessione di messaggistica nativa in corso…"
+  },
+  "bannerOkTitle": {
+    "message": "L'helper di messaggistica nativa è in esecuzione"
+  },
+  "bannerOkDetail": {
+    "message": "L'helper del file system locale è installato e risponde correttamente."
+  },
+  "bannerErrorTitle": {
+    "message": "Helper di messaggistica nativa non trovato"
+  },
+  "bannerErrorDetail": {
+    "message": "L'applicazione helper non è installata o non risponde. Seguire le istruzioni di configurazione di seguito per iniziare."
+  },
+  "optionsSetupHeading": {
+    "message": "Configurazione richiesta — Come funziona"
+  },
+  "termVFS": {
+    "message": "VFS (File system virtuale)"
+  },
+  "termNativeMessaging": {
+    "message": "Messaggistica nativa"
+  },
+  "optionsIntroP1": {
+    "message": "Questo componente aggiuntivo fornisce accesso al file system della cartella home locale a qualsiasi WebExtension che utilizza il $TOOLKIT$. Dopo aver concesso l'accesso, queste WebExtensions possono leggere e scrivere file nella cartella home. Poiché le moderne WebExtensions non possono accedere direttamente al file system locale, utilizza il $NATIVEMSG$ di Mozilla per comunicare con una piccola applicazione helper in esecuzione sul computer.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "L'architettura è composta da due parti:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Questo componente aggiuntivo riceve le richieste del file system dalle estensioni consumer e le inoltra all'helper nativo tramite un pipe locale sicuro."
+  },
+  "optionsArchitectureLi2": {
+    "message": "L'helper nativo viene eseguito sul computer e svolge le operazioni effettive del file system, con la home directory come radice."
+  },
+  "optionsIntroP2": {
+    "message": "Per iniziare, scarica il pacchetto dell'helper, estrailo ed esegui lo script di installazione incluso. Questo registra l'helper con Thunderbird in modo che il componente aggiuntivo possa comunicare con esso."
+  },
+  "optionsSecurityNotice": {
+    "message": "Avviso di sicurezza: Concedere l'accesso al file system ha implicazioni di sicurezza. Valuta se hai davvero bisogno dell'accesso diretto al file system o se un backend di archiviazione meno invasivo potrebbe funzionare altrettanto bene."
+  },
+  "optionsDownloadTitle": {
+    "message": "Helper di messaggistica nativa"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Dopo il download, estrai il pacchetto, apri un terminale nella cartella estratta ed esegui lo script per la tua piattaforma:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Riavvia Thunderbird dopo l'installazione. Python 3 deve essere installato nel sistema."
+  },
+  "optionsGrantedHeading": {
+    "message": "Accessi concessi"
+  },
+  "optionsThAddon": {
+    "message": "Componente aggiuntivo"
+  },
+  "optionsThAccessLevel": {
+    "message": "Livello di accesso"
+  },
+  "optionsEmptyState": {
+    "message": "Nessuna estensione ha ancora ricevuto l'accesso."
+  },
+  "optionsNotice": {
+    "message": "La revoca dell'accesso rimuove immediatamente la connessione memorizzata. L'estensione perderà l'accesso alla cartella home alla prossima richiesta."
+  },
+  "accessReadOnly": {
+    "message": "Sola lettura"
+  },
+  "accessReadWrite": {
+    "message": "Lettura / Scrittura"
+  }
+}

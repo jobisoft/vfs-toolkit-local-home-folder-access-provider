@@ -1,0 +1,158 @@
+{
+  "extensionName": {
+    "message": "Proveedor de acceso a la carpeta personal local"
+  },
+  "extensionDescription": {
+    "message": "Un complemento proveedor para WebExtensions que utiliza el kit de herramientas VFS para exponer la carpeta personal local mediante mensajería nativa."
+  },
+  "providerName": {
+    "message": "Carpeta personal local"
+  },
+  "btnCancel": {
+    "message": "Cancelar"
+  },
+  "btnOK": {
+    "message": "Aceptar"
+  },
+  "btnGrantAccess": {
+    "message": "Conceder acceso"
+  },
+  "btnDownload": {
+    "message": "Descargar"
+  },
+  "btnRevoke": {
+    "message": "Revocar"
+  },
+  "setupTitle": {
+    "message": "Proveedor de acceso a la carpeta personal local"
+  },
+  "setupQuestion": {
+    "message": "¿Conceder al complemento «$ADDON_NAME$» acceso a su carpeta personal local?",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupAlreadyGranted": {
+    "message": "El acceso para el complemento «$ADDON_NAME$» ya ha sido concedido.",
+    "placeholders": {
+      "ADDON_NAME": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupReadonlyTitle": {
+    "message": "Acceso de solo lectura"
+  },
+  "setupReadonlyDesc": {
+    "message": "El complemento puede explorar y leer archivos en su carpeta personal, pero no puede crear, modificar ni eliminar nada."
+  },
+  "setupReadwriteTitle": {
+    "message": "Acceso de lectura y escritura"
+  },
+  "setupReadwriteDesc": {
+    "message": "El complemento puede leer, crear, modificar y eliminar archivos y carpetas en su carpeta personal."
+  },
+  "configTitle": {
+    "message": "Carpeta personal local — Configuración"
+  },
+  "configSectionFileListing": {
+    "message": "Lista de archivos"
+  },
+  "configShowHiddenTitle": {
+    "message": "Mostrar archivos ocultos"
+  },
+  "configShowHiddenDesc": {
+    "message": "Incluir archivos y carpetas cuyo nombre comienza con un punto (p. ej. .bashrc)."
+  },
+  "configSaved": {
+    "message": "Configuración guardada."
+  },
+  "optionsPageTitle": {
+    "message": "Proveedor de acceso a la carpeta personal local — Opciones"
+  },
+  "bannerChecking": {
+    "message": "Comprobando la conexión de mensajería nativa…"
+  },
+  "bannerOkTitle": {
+    "message": "El asistente de mensajería nativa está en ejecución"
+  },
+  "bannerOkDetail": {
+    "message": "El asistente del sistema de archivos local está instalado y responde correctamente."
+  },
+  "bannerErrorTitle": {
+    "message": "No se encontró el asistente de mensajería nativa"
+  },
+  "bannerErrorDetail": {
+    "message": "La aplicación auxiliar no está instalada o no responde. Siga las instrucciones de configuración a continuación para comenzar."
+  },
+  "optionsSetupHeading": {
+    "message": "Configuración necesaria — Cómo funciona"
+  },
+  "termVFS": {
+    "message": "VFS (Sistema de archivos virtual)"
+  },
+  "termNativeMessaging": {
+    "message": "Mensajería nativa"
+  },
+  "optionsIntroP1": {
+    "message": "Este complemento proporciona acceso al sistema de archivos de su carpeta personal local a cualquier WebExtension que use el $TOOLKIT$. Tras conceder el acceso, estas WebExtensions pueden leer y escribir archivos en su carpeta personal. Dado que las WebExtensions modernas no pueden acceder directamente al sistema de archivos local, utiliza el $NATIVEMSG$ de Mozilla para comunicarse con una pequeña aplicación auxiliar en su equipo.",
+    "placeholders": {
+      "NATIVEMSG": {
+        "content": "<strong>$2</strong>"
+      },
+      "TOOLKIT": {
+        "content": "<a href=\"$3\"><strong>VFS Toolkit</strong></a>"
+      }
+    }
+  },
+  "optionsArchitectureP": {
+    "message": "La arquitectura tiene dos partes:"
+  },
+  "optionsArchitectureLi1": {
+    "message": "Este complemento recibe solicitudes del sistema de archivos de las extensiones consumidoras y las reenvía al asistente nativo a través de una tubería local segura."
+  },
+  "optionsArchitectureLi2": {
+    "message": "El asistente nativo se ejecuta en su equipo y realiza las operaciones reales del sistema de archivos, con su directorio personal como raíz."
+  },
+  "optionsIntroP2": {
+    "message": "Para comenzar, descargue el paquete del asistente, extráigalo y ejecute el script de instalación incluido. Esto registra el asistente en Thunderbird para que el complemento pueda comunicarse con él."
+  },
+  "optionsSecurityNotice": {
+    "message": "Aviso de seguridad: Conceder acceso al sistema de archivos tiene implicaciones de seguridad. Considere si realmente necesita acceso directo al sistema de archivos o si un backend de almacenamiento menos intrusivo podría funcionar igualmente."
+  },
+  "optionsDownloadTitle": {
+    "message": "Asistente de mensajería nativa"
+  },
+  "optionsDownloadFilename": {
+    "message": "native-home-folder-file-system-access-app.zip"
+  },
+  "optionsInstructionsP": {
+    "message": "Tras la descarga, extraiga el paquete, abra un terminal en la carpeta extraída y ejecute el script para su plataforma:"
+  },
+  "optionsInstructionsRestart": {
+    "message": "Reinicie Thunderbird tras la instalación. Python 3 debe estar instalado en su sistema."
+  },
+  "optionsGrantedHeading": {
+    "message": "Accesos concedidos"
+  },
+  "optionsThAddon": {
+    "message": "Complemento"
+  },
+  "optionsThAccessLevel": {
+    "message": "Nivel de acceso"
+  },
+  "optionsEmptyState": {
+    "message": "Aún no se ha concedido acceso a ninguna extensión."
+  },
+  "optionsNotice": {
+    "message": "Revocar el acceso elimina inmediatamente la conexión almacenada. La extensión perderá el acceso a su carpeta personal en su próxima solicitud."
+  },
+  "accessReadOnly": {
+    "message": "Solo lectura"
+  },
+  "accessReadWrite": {
+    "message": "Lectura / Escritura"
+  }
+}
