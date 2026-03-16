@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "ローカルファイルシステムヘルパーがインストールされており、正常に応答しています。"
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "ネイティブアプリが接続されていません"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "プロバイダーが完全に設定されていない可能性があります。詳細とセットアップ手順については、「$EXTENSION_NAME$」拡張機能のオプションページを開いてください。",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "ネイティブメッセージングヘルパーが見つかりません"
   },

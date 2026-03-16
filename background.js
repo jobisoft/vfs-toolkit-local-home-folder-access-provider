@@ -110,7 +110,14 @@ class NativeFsVfsProvider extends VfsProviderImplementation {
   #send(requestId, cmd, args = {}) {
     return new Promise((resolve, reject) => {
       if (!this.#port) {
-        reject(new Error('Native app not connected'));
+        reject(Object.assign(new Error('Native app not connected'), {
+          code: 'E:PROVIDER',
+          details: {
+            id: 'native-app-not-connected',
+            title: browser.i18n.getMessage('errorNativeNotConnectedTitle'),
+            description: browser.i18n.getMessage('errorNativeNotConnectedDesc', [browser.i18n.getMessage('extensionName')]),
+          },
+        }));
         return;
       }
       this.#pending.set(requestId, { resolve, reject, chunks: null });
@@ -261,6 +268,10 @@ const provider = new NativeFsVfsProvider({
 });
 
 provider.init();
+
+browser.runtime.onInstalled.addListener(({ reason }) => {
+  if (reason === 'install') browser.runtime.openOptionsPage();
+});
 
 // When the "show hidden files" config changes, tell all open pickers to refresh.
 browser.storage.onChanged.addListener(async (changes, area) => {

@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "Pomocník lokálního souborového systému je nainstalován a správně reaguje."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Nativní aplikace není připojena"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Poskytovatel nemusí být plně nastaven. Otevřete stránku možností rozšíření „$EXTENSION_NAME$“ pro více podrobností a pokyny k nastavení.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "Pomocník pro nativní zasílání zpráv nebyl nalezen"
   },

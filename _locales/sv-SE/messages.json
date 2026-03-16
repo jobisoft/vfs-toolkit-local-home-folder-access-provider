@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "Hjälpprogrammet för det lokala filsystemet är installerat och svarar korrekt."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Inbyggd app ej ansluten"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Leverantören kanske inte är helt konfigurerad. Öppna alternativsidan för tillägget «$EXTENSION_NAME$» för mer information och konfigurationsinstruktioner.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "Hjälpprogrammet för inbyggd meddelandehantering hittades inte"
   },

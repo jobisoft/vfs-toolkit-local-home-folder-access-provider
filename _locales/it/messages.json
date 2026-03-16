@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "L'helper del file system locale è installato e risponde correttamente."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Applicazione nativa non connessa"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Il provider potrebbe non essere completamente configurato. Apri la pagina delle opzioni dell'estensione «$EXTENSION_NAME$» per ulteriori dettagli e istruzioni di configurazione.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "Helper di messaggistica nativa non trovato"
   },

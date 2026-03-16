@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "The local file system helper is installed and responding correctly."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Native app not connected"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "The provider may not be fully set up. Open the options page of the \"$EXTENSION_NAME$\" extension for more details and setup instructions.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "Native messaging helper not found"
   },

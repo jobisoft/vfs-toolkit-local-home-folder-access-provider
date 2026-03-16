@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "A helyi fájlrendszer-segítő telepítve van és megfelelően válaszol."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "A natív alkalmazás nem csatlakozott"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Előfordulhat, hogy a szolgáltató nincs teljesen beállítva. A további részletekért és a beállítási utasításokért nyissa meg a(z) „$EXTENSION_NAME$“ bővítmény beállítások oldalát.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "A natív üzenetküldési segítő nem található"
   },

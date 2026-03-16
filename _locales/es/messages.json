@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "El asistente del sistema de archivos local está instalado y responde correctamente."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Aplicación nativa no conectada"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Es posible que el proveedor no esté completamente configurado. Abra la página de opciones de la extensión «$EXTENSION_NAME$» para obtener más detalles e instrucciones de configuración.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "No se encontró el asistente de mensajería nativa"
   },

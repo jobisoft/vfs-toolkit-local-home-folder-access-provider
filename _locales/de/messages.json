@@ -81,6 +81,17 @@
   "bannerOkDetail": {
     "message": "Der lokale Dateisystem-Helfer ist installiert und antwortet korrekt."
   },
+  "errorNativeNotConnectedTitle": {
+    "message": "Native App nicht verbunden"
+  },
+  "errorNativeNotConnectedDesc": {
+    "message": "Der Anbieter ist möglicherweise nicht vollständig eingerichtet. Öffnen Sie die Optionsseite der Erweiterung „$EXTENSION_NAME$“ für weitere Details und Einrichtungsanweisungen.",
+    "placeholders": {
+      "EXTENSION_NAME": {
+        "content": "$1"
+      }
+    }
+  },
   "bannerErrorTitle": {
     "message": "Native-Messaging-Helfer nicht gefunden"
   },
