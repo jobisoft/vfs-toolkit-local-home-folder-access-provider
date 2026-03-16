@@ -200,9 +200,10 @@ async function loadConnections() {
 
 function accessBadge(capabilities) {
   const canWrite = capabilities?.file?.add === true;
-  return canWrite
-    ? `<span class="badge badge-write">&#10003; ${browser.i18n.getMessage('accessReadWrite')}</span>`
-    : `<span class="badge badge-read">&#128274; ${browser.i18n.getMessage('accessReadOnly')}</span>`;
+  const span = document.createElement('span');
+  span.className = canWrite ? 'badge badge-write' : 'badge badge-read';
+  span.textContent = (canWrite ? '\u2713 ' : '\uD83D\uDD12 ') + browser.i18n.getMessage(canWrite ? 'accessReadWrite' : 'accessReadOnly');
+  return span;
 }
 
 async function render() {
@@ -210,7 +211,7 @@ async function render() {
   const tbody = document.getElementById('connections-body');
   const empty = document.getElementById('empty-state');
 
-  tbody.innerHTML = '';
+  tbody.replaceChildren();
 
   if (!connections.length) {
     empty.style.display = '';
@@ -219,20 +220,26 @@ async function render() {
   empty.style.display = 'none';
 
   for (const conn of connections) {
-    const tr = document.createElement('tr');
     const displayName = conn.addonName ?? conn.addonId ?? '—';
 
-    tr.innerHTML = `
-      <td>${escHtml(displayName)}</td>
-      <td>${accessBadge(conn.capabilities)}</td>
-      <td><button class="revoke-btn" data-addon-id="${escHtml(conn.addonId)}" data-storage-id="${escHtml(conn.storageId)}">${browser.i18n.getMessage('btnRevoke')}</button></td>
-    `;
+    const btn = document.createElement('button');
+    btn.className = 'revoke-btn';
+    btn.dataset.addonId = conn.addonId;
+    btn.dataset.storageId = conn.storageId;
+    btn.textContent = browser.i18n.getMessage('btnRevoke');
+    btn.addEventListener('click', () => revokeAccess(conn.addonId, conn.storageId));
+
+    const td1 = document.createElement('td');
+    td1.textContent = displayName;
+    const td2 = document.createElement('td');
+    td2.appendChild(accessBadge(conn.capabilities));
+    const td3 = document.createElement('td');
+    td3.appendChild(btn);
+
+    const tr = document.createElement('tr');
+    tr.append(td1, td2, td3);
     tbody.appendChild(tr);
   }
-
-  tbody.querySelectorAll('.revoke-btn').forEach(btn => {
-    btn.addEventListener('click', () => revokeAccess(btn.dataset.addonId, btn.dataset.storageId));
-  });
 }
 
 async function revokeAccess(addonId, storageId) {
@@ -250,13 +257,6 @@ async function revokeAccess(addonId, storageId) {
   render();
 }
 
-function escHtml(str) {
-  return String(str ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
 
 // ── OS-specific section visibility ─────────────────────────────────────────────
 
