@@ -1,8 +1,8 @@
 /**
  * background.js - Native-messaging VFS provider for vfs-toolkit
  *
- * Relays all file/folder operations to the local native app (vfs_fs) via
- * Mozilla's native messaging. The native app maps VFS paths onto the real file
+ * Relays all file/folder operations to a local native app via Mozilla's
+ * native messaging. The native app maps VFS paths onto the real file
  * system, defaulting to the user's home directory as the root.
  *
  * Protocol (both directions use 4-byte LE length prefix + UTF-8 JSON):
