@@ -161,29 +161,36 @@ async function main() {
   console.log("Cleaning output directory ...");
   rm("dist");
 
-  console.log("Fetching latest vfs-provider from GitHub ...");
-  const repoPath = "modules/vfs-toolkit/vfs-provider";
-  const commits = await fetchJSON(
-    `https://api.github.com/repos/thunderbird/webext-support/commits?path=${repoPath}&per_page=1`
-  );
-  const sha = commits[0].sha;
-  console.log(`  Latest commit: ${sha}`);
-
-  const fileUrl = `https://github.com/thunderbird/webext-support/raw/${sha}/${repoPath}/vfs-provider.mjs`;
-  console.log("  Fetching vfs-provider.mjs ...");
-  const content = await fetchText(fileUrl);
-  rm("src/vendor/vfs-provider");
-  fs.writeFileSync("src/vendor/vfs-provider.mjs", content);
-
-  // Update src/VENDOR.md — replace the vfs-provider upstream URL with the new commit hash
+  const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
   const vendorMdPath = "src/VENDOR.md";
   let vendorMd = fs.readFileSync(vendorMdPath, "utf8");
-  vendorMd = vendorMd.replace(
-    /^(## vfs-provider\.mjs\n\n- \*\*File\*\* : .+\n- \*\*Upstream\*\* : )https:\/\/github\.com\/thunderbird\/webext-support\/raw\/[0-9a-f]+\/modules\/vfs-toolkit\/vfs-provider\/vfs-provider\.mjs$/m,
-    `$1${fileUrl}`
-  );
+
+  for (const entry of pkg.vendor) {
+    const filename = path.basename(entry.dest);
+    console.log(`Fetching latest ${filename} from GitHub ...`);
+    const commits = await fetchJSON(
+      `https://api.github.com/repos/${entry.repo}/commits?path=${entry.path}&per_page=1`
+    );
+    const sha = commits[0].sha;
+    console.log(`  Latest commit: ${sha}`);
+
+    const fileUrl = `https://github.com/${entry.repo}/raw/${sha}/${entry.path}`;
+    console.log(`  Fetching ${filename} ...`);
+    const content = await fetchText(fileUrl);
+    fs.mkdirSync(path.dirname(entry.dest), { recursive: true });
+    fs.writeFileSync(entry.dest, content);
+
+    // Update src/VENDOR.md — replace the upstream URL for this file with the new commit hash
+    const escapedFilename = filename.replace(/\./g, "\\.");
+    const re = new RegExp(
+      `^(## ${escapedFilename}\\n\\n- \\*\\*File\\*\\* : .+\\n- \\*\\*Upstream\\*\\* : ).+$`,
+      "m"
+    );
+    vendorMd = vendorMd.replace(re, `$1${fileUrl}`);
+    console.log(`  Updated src/VENDOR.md with commit ${sha}`);
+  }
+
   fs.writeFileSync(vendorMdPath, vendorMd);
-  console.log(`  Updated src/VENDOR.md with commit ${sha}`);
 
   console.log("Creating extension file (dist/vfs-provider-home-folder-access.xpi) ...");
   zip("src", "dist/vfs-provider-home-folder-access.xpi");

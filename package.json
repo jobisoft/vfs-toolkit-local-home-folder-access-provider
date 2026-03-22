@@ -1,7 +1,19 @@
 {
   "name": "vfs-provider-local-home-folder-access",
-  "version": "1.0.3",
+  "version": "1.2.1",
   "scripts": {
     "build": "node build.js"
-  }
+  },
+  "vendor": [
+    {
+      "repo": "thunderbird/webext-support",
+      "path": "modules/i18n/i18n.mjs",
+      "dest": "src/vendor/i18n.mjs"
+    },
+    {
+      "repo": "thunderbird/webext-support",
+      "path": "modules/vfs-toolkit/vfs-provider/vfs-provider.mjs",
+      "dest": "src/vendor/vfs-provider.mjs"
+    }
+  ]
 }

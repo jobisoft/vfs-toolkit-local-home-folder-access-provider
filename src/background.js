@@ -278,6 +278,6 @@ browser.storage.onChanged.addListener(async (changes, area) => {
   if (area !== 'local' || !('vfs-toolkit-local-show-hidden' in changes)) return;
   const rv = await browser.storage.local.get({ [CONNECTIONS_KEY]: [] });
   for (const conn of rv[CONNECTIONS_KEY]) {
-    provider.reportStorageChange(conn.storageId, ['/']);
+    provider.reportStorageChange(conn.storageId, [{ path: '/', kind: 'directory', action: 'modified' }]);
   }
 });
