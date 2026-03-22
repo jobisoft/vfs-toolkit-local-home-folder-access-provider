@@ -162,8 +162,7 @@ async function main() {
   rm("dist");
 
   const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-  const vendorMdPath = "src/VENDOR.md";
-  let vendorMd = fs.readFileSync(vendorMdPath, "utf8");
+  const vendorSections = [];
 
   for (const entry of pkg.vendor) {
     const filename = path.basename(entry.dest);
@@ -180,17 +179,11 @@ async function main() {
     fs.mkdirSync(path.dirname(entry.dest), { recursive: true });
     fs.writeFileSync(entry.dest, content);
 
-    // Update src/VENDOR.md — replace the upstream URL for this file with the new commit hash
-    const escapedFilename = filename.replace(/\./g, "\\.");
-    const re = new RegExp(
-      `^(## ${escapedFilename}\\n\\n- \\*\\*File\\*\\* : .+\\n- \\*\\*Upstream\\*\\* : ).+$`,
-      "m"
-    );
-    vendorMd = vendorMd.replace(re, `$1${fileUrl}`);
-    console.log(`  Updated src/VENDOR.md with commit ${sha}`);
+    vendorSections.push(`## ${filename}\n\n- **File** : \`${entry.dest.replace(/^src\//, "")}\`\n- **Upstream** : ${fileUrl}`);
+    console.log(`  Fetched ${filename} at commit ${sha}`);
   }
 
-  fs.writeFileSync(vendorMdPath, vendorMd);
+  fs.writeFileSync("src/VENDOR.md", `# Vendored Files\n\nThis file lists files that were not created by this project and are maintained upstream elsewhere.\n\n${vendorSections.join("\n\n")}\n`);
 
   console.log("Creating extension file (dist/vfs-provider-home-folder-access.xpi) ...");
   zip("src", "dist/vfs-provider-home-folder-access.xpi");
