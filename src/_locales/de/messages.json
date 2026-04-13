@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "Der Zugriff für das Add-on \"$ADDON_NAME$\" wurde bereits gewährt.",
+    "message": "Sowohl Lese- als auch Lese-/Schreibzugriff für das Add-on \"$ADDON_NAME$\" wurden bereits gewährt.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

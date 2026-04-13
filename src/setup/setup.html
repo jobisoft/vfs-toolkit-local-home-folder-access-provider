@@ -91,6 +91,22 @@
       background: #eff6ff;
     }
 
+    .access-option.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f1f5f9;
+    }
+
+    .access-option.disabled:hover {
+      border-color: #e2e8f0;
+      background: #f1f5f9;
+    }
+
+    .access-option.disabled input[type="radio"],
+    .access-option.disabled label {
+      cursor: not-allowed;
+    }
+
     .actions {
       display: flex;
       gap: 8px;

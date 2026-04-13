@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "Доступ для дополнения «$ADDON_NAME$» уже был разрешён.",
+    "message": "Доступ только для чтения и доступ для чтения и записи для дополнения «$ADDON_NAME$» уже были разрешены.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

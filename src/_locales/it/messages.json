@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "L'accesso per il componente aggiuntivo «$ADDON_NAME$» è già stato concesso.",
+    "message": "L'accesso sia in sola lettura sia in lettura/scrittura per il componente aggiuntivo «$ADDON_NAME$» è già stato concesso.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

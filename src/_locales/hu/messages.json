@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "A(z) \"$ADDON_NAME$\" kiegészítő hozzáférése már engedélyezve van.",
+    "message": "A(z) \"$ADDON_NAME$\" kiegészítő csak olvasási és olvasási/írási hozzáférése is már engedélyezve van.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

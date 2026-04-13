@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "O acesso para o complemento «$ADDON_NAME$» já foi concedido.",
+    "message": "O acesso somente leitura e de leitura/escrita para o complemento «$ADDON_NAME$» já foi concedido.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "アドオン「$ADDON_NAME$」のアクセスはすでに許可されています。",
+    "message": "アドオン「$ADDON_NAME$」の読み取り専用および読み書きアクセスは、すでに両方とも許可されています。",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

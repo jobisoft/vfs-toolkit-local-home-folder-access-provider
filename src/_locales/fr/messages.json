@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "L'accès pour le module complémentaire « $ADDON_NAME$ » a déjà été accordé.",
+    "message": "L'accès en lecture seule et en lecture/écriture pour le module complémentaire « $ADDON_NAME$ » a déjà été accordé.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

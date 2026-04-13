@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "Přístup pro doplněk \"$ADDON_NAME$\" byl již udělen.",
+    "message": "Přístup pouze pro čtení i přístup pro čtení a zápis pro doplněk \"$ADDON_NAME$\" již byly uděleny.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

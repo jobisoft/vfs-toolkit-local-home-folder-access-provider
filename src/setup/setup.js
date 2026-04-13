@@ -24,41 +24,53 @@ const displayName = addonName ?? addonId ?? 'this add-on';
 document.getElementById('msg').textContent =
   browser.i18n.getMessage('setupQuestion', [displayName]);
 
-// Highlight selected radio option
-for (const option of document.querySelectorAll('.access-option')) {
-  option.addEventListener('click', () => {
-    const radio = option.querySelector('input[type="radio"]');
-    radio.checked = true;
-    document.querySelectorAll('.access-option').forEach(o => o.classList.remove('selected'));
-    option.classList.add('selected');
-    document.getElementById('grant-btn').disabled = false;
-  });
-}
-
 document.getElementById('cancel-btn').addEventListener('click', () => window.close());
 
 const rv = await browser.storage.local.get({ [CONNECTIONS_KEY]: [] });
-const alreadyConnected = rv[CONNECTIONS_KEY].some(c => c.addonId === addonId);
+const mine = rv[CONNECTIONS_KEY].filter(c => c.addonId === addonId);
+const hasReadOnly = mine.some(c => c.capabilities?.file?.add === false);
+const hasReadWrite = mine.some(c => c.capabilities?.file?.add === true);
 
-if (alreadyConnected) {
+function disableOption(optionId) {
+  const option = document.getElementById(optionId);
+  option.classList.add('disabled');
+  option.querySelector('input[type="radio"]').disabled = true;
+}
+
+if (hasReadOnly) disableOption('opt-readonly');
+if (hasReadWrite) disableOption('opt-readwrite');
+
+if (hasReadOnly && hasReadWrite) {
   document.getElementById('msg').textContent =
     browser.i18n.getMessage('setupAlreadyGranted', [displayName]);
-  document.getElementById('access-options').style.display = 'none';
   document.getElementById('cancel-btn').style.display = 'none';
   const btn = document.getElementById('grant-btn');
   btn.textContent = browser.i18n.getMessage('btnOK');
   btn.disabled = false;
   btn.addEventListener('click', () => window.close());
 } else {
+  // Highlight selected radio option (enabled ones only)
+  for (const option of document.querySelectorAll('.access-option')) {
+    option.addEventListener('click', () => {
+      if (option.classList.contains('disabled')) return;
+      const radio = option.querySelector('input[type="radio"]');
+      radio.checked = true;
+      document.querySelectorAll('.access-option').forEach(o => o.classList.remove('selected'));
+      option.classList.add('selected');
+      document.getElementById('grant-btn').disabled = false;
+    });
+  }
+
   document.getElementById('grant-btn').addEventListener('click', async () => {
     const selected = document.querySelector('input[name="access"]:checked');
     if (!selected) return;
 
-    const capabilities = selected.value === 'readwrite' ? readwriteCapabilities : readonlyCapabilities;
+    const isReadWrite = selected.value === 'readwrite';
+    const capabilities = isReadWrite ? readwriteCapabilities : readonlyCapabilities;
+    const name = browser.i18n.getMessage(isReadWrite ? 'accessReadWrite' : 'accessReadOnly');
     const storageId = crypto.randomUUID();
-    const providerName = browser.i18n.getMessage('providerName');
 
-    await vfs.reportNewConnection(addonId, addonName, storageId, providerName, capabilities);
+    await vfs.reportNewConnection(addonId, addonName, storageId, name, capabilities);
 
     window.close();
   });

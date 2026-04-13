@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "Åtkomst för tillägget «$ADDON_NAME$» har redan beviljats.",
+    "message": "Både skrivskyddad åtkomst och läs-/skrivåtkomst för tillägget «$ADDON_NAME$» har redan beviljats.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"

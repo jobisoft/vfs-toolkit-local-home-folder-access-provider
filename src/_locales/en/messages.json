@@ -35,7 +35,7 @@
     }
   },
   "setupAlreadyGranted": {
-    "message": "Access for add-on \"$ADDON_NAME$\" has already been granted.",
+    "message": "Both read-only and read/write access for add-on \"$ADDON_NAME$\" have already been granted.",
     "placeholders": {
       "ADDON_NAME": {
         "content": "$1"
