@@ -8,6 +8,7 @@ const CONNECTIONS_KEY = 'vfs-toolkit-connections';
 const params = new URLSearchParams(location.search);
 const addonId = params.get('addonId');
 const addonName = params.get('addonName');
+const setupToken = params.get('setupToken');
 
 const readonlyCapabilities = {
   file: { read: true, add: false, modify: false, delete: false },
@@ -70,7 +71,7 @@ if (hasReadOnly && hasReadWrite) {
     const name = browser.i18n.getMessage(isReadWrite ? 'accessReadWrite' : 'accessReadOnly');
     const storageId = crypto.randomUUID();
 
-    await vfs.reportNewConnection(addonId, addonName, storageId, name, capabilities);
+    await vfs.reportNewConnection(addonId, addonName, storageId, name, capabilities, setupToken);
 
     window.close();
   });
